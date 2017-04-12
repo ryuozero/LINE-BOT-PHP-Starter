@@ -37,12 +37,18 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData['messages'][1]['packageId'] = "3";	
   $arrPostData['messages'][1]['stickerId'] = "184";	
 	
-}else if($arrJson['events'][0]['message']['text'] == "โปร"){
+}else if($arrJson['events'][0]['message']['text'] == "โปร" || "โปรโมชั่น"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "image";
   $arrPostData['messages'][0]['originalContentUrl'] = "https://scontent.fbkk2-4.fna.fbcdn.net/v/t1.0-9/17200980_1753246341658205_4509040193790302709_n.jpg?oh=b1c679ec9d276f3228b31f06b9fa9bfa&oe=599B21CC";
  $arrPostData['messages'][0]['previewImageUrl'] = "https://scontent.fbkk2-4.fna.fbcdn.net/v/t1.0-9/17200980_1753246341658205_4509040193790302709_n.jpg?oh=b1c679ec9d276f3228b31f06b9fa9bfa&oe=599B21CC";
+}else if($arrJson['events'][0]['message']['text'] == "mv"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "video";
+  $arrPostData['messages'][0]['originalContentUrl'] = "http://brm-efd.com/ff.mp4";
+  $arrPostData['messages'][0]['previewImageUrl'] = "http://brm-efd.com/ff.jpg";	
 }
 /*else{
   $arrPostData = array();
