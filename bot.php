@@ -37,7 +37,7 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData['messages'][1]['packageId'] = "3";	
   $arrPostData['messages'][1]['stickerId'] = "184";	
 	
-}else if($arrJson['events'][0]['message']['text'] == "โปร" || "โปรโมชั่น"){
+}else if($arrJson['events'][0]['message']['text'] == "โปร"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "image";
