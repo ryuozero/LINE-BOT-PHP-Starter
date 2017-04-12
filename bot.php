@@ -29,13 +29,13 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
 }else if($arrJson['events'][0]['message']['text'] == "pro"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "image";
-  $arrPostData['messages'][0]['image'] = "https://scontent.fbkk2-4.fna.fbcdn.net/v/t1.0-9/17200980_1753246341658205_4509040193790302709_n.jpg?oh=b1c679ec9d276f3228b31f06b9fa9bfa&oe=599B21CC";
-}else if($arrJson['events'][0]['message']['text'] == "pro2"){
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "message=hi&imageThumbnail=https://scontent.fbkk2-4.fna.fbcdn.net/v/t1.0-9/17200980_1753246341658205_4509040193790302709_n.jpg?oh=b1c679ec9d276f3228b31f06b9fa9bfa&oe=599B21CC";
+}else if($arrJson['events'][0]['message']['text'] == "โปร"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "image";
-  $arrPostData['messages'][0]['image'] = "<img src='https://scontent.fbkk2-4.fna.fbcdn.net/v/t1.0-9/17200980_1753246341658205_4509040193790302709_n.jpg?oh=b1c679ec9d276f3228b31f06b9fa9bfa&oe=599B21CC' />";
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "<img src='https://scontent.fbkk2-4.fna.fbcdn.net/v/t1.0-9/17200980_1753246341658205_4509040193790302709_n.jpg?oh=b1c679ec9d276f3228b31f06b9fa9bfa&oe=599B21CC' />";
 }
 /*else{
   $arrPostData = array();
