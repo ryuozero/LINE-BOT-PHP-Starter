@@ -47,8 +47,8 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "video";
-  $arrPostData['messages'][0]['originalContentUrl'] = "http://brm-efd.com/ff.mp4";
-  $arrPostData['messages'][0]['previewImageUrl'] = "http://brm-efd.com/ff.jpg";	
+  $arrPostData['messages'][0]['originalContentUrl'] = "https://brm-efd.com/ff.mp4";
+  $arrPostData['messages'][0]['previewImageUrl'] = "https://brm-efd.com/ff.jpg";	
 }
 /*else{
   $arrPostData = array();
