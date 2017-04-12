@@ -10,6 +10,7 @@ $strUrl = "https://api.line.me/v2/bot/message/reply";
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
+$jdata = "https://www.youtube.com/watch?v=Jt1h1MinlLI";
  
 if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData = array();
@@ -26,17 +27,22 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
+}else if($arrJson['events'][0]['message']['text'] == "1"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = $jdata;
+  $arrPostData['messages'][1]['type'] = "sticker";
+  $arrPostData['messages'][1]['packageId'] = "2";	
+  $arrPostData['messages'][1]['stickerId'] = "100";		
 }else if($arrJson['events'][0]['message']['text'] == "pro"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "เรามีโปรโมชั่นดีๆมาแนะนำทุกท่านนะครับ";
-	
-	
   $arrPostData['messages'][1]['type'] = "sticker";
   $arrPostData['messages'][1]['packageId'] = "3";	
   $arrPostData['messages'][1]['stickerId'] = "184";	
-	
 }else if($arrJson['events'][0]['message']['text'] == "โปร"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
@@ -47,8 +53,8 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "video";
-  $arrPostData['messages'][0]['originalContentUrl'] = "https://brm-efd.com/ff.mp4";
-  $arrPostData['messages'][0]['previewImageUrl'] = "https://brm-efd.com/ff.jpg";	
+  $arrPostData['messages'][0]['originalContentUrl'] = "https://krujunrmu.com/img/ff.mp4";
+  $arrPostData['messages'][0]['previewImageUrl'] = "https://krujunrmu.com/img/ff.jpg";	
 }
 /*else{
   $arrPostData = array();
