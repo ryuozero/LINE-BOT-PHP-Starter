@@ -30,12 +30,13 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "message=hi&imageThumbnail=https://scontent.fbkk2-4.fna.fbcdn.net/v/t1.0-9/17200980_1753246341658205_4509040193790302709_n.jpg?oh=b1c679ec9d276f3228b31f06b9fa9bfa&oe=599B21CC";
+  $arrPostData['messages'][0]['text'] = "เรามีโปรโมชั่นดีๆมาแนะนำทุกท่านนะครับ";
 }else if($arrJson['events'][0]['message']['text'] == "โปร"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "<img src='https://scontent.fbkk2-4.fna.fbcdn.net/v/t1.0-9/17200980_1753246341658205_4509040193790302709_n.jpg?oh=b1c679ec9d276f3228b31f06b9fa9bfa&oe=599B21CC' />";
+  $arrPostData['messages'][0]['type'] = "image";
+  $arrPostData['messages'][0]['originalContentUrl'] = "https://scontent.fbkk2-4.fna.fbcdn.net/v/t1.0-9/17200980_1753246341658205_4509040193790302709_n.jpg?oh=b1c679ec9d276f3228b31f06b9fa9bfa&oe=599B21CC";
+ $arrPostData['messages'][0]['previewImageUrl'] = "https://scontent.fbkk2-4.fna.fbcdn.net/v/t1.0-9/17883595_1768608466788659_7584602602407306549_n.jpg?oh=584519d4b58296a865e3f91841661ab6&oe=5994E68E";
 }
 /*else{
   $arrPostData = array();
